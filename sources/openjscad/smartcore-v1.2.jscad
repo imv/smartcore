@@ -1558,7 +1558,8 @@ switch(output){
         ];
     break;
     case 5:
-        res = [motorXY("left"), motorXY("right").mirroredX().translate([-40,0,0])];
+        var xOffset = -40 - ( _wallThickness - 10) * 2;
+        res = [motorXY("left"), motorXY("right").mirroredX().translate([xOffset,0,0])];
     break;
     case 6:
         res = [bearingsXY("left"),bearingsXY("right").mirroredX().translate([-40,0,0]) ];
